@@ -24,13 +24,13 @@
 
 <br>
 
-## :sparkles: Install
+## :wrench: Install
 
 Make sure you have [Java](https://java.com/en/download/) installed. [Download](https://github.com/Karthikeshwar1/Etcch-A-Sketch/releases) the compressed file, extract it, and run the main file.
 
 <br>
 
-## :seedling: How to use
+## :eyes: How to use
 
 - Use **arrow keys** to move and draw
 - Hold down **shift** to increase speed or **ctrl/command** to decrease speed
@@ -39,7 +39,7 @@ Make sure you have [Java](https://java.com/en/download/) installed. [Download](h
 
 <br>
 
-<h2><img width="512" height="422" src="screenshots/screenshot-2.jpg"></h2>
+<h2><img align="center" width="512" height="422" src="screenshots/screenshot-2.jpg"></h2>
 
 <br>
 
