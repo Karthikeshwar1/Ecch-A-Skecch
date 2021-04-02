@@ -12,9 +12,11 @@
 <h5 align="center">Drawing app inspired from the popular toy Etch A Sketch
 </h5>
 
-<h></h>
+<h1 align="center">
 
 <a title="Etcha, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg"><img width="512" alt="Taj Mahal drawing on an Etch-A-Sketch" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg/512px-Taj_Mahal_drawing_on_an_Etch-A-Sketch.jpg"></a>
+
+</h1>
 
 <br>
 
