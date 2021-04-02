@@ -39,7 +39,7 @@ Make sure you have [Java](https://java.com/en/download/) installed. [Download](h
 
 <br>
 
-<h2><img src="screenshots/screenshot-2.jpg"></h2>
+<h2><img width="512" height="422" src="screenshots/screenshot-2.jpg"></h2>
 
 <br>
 
