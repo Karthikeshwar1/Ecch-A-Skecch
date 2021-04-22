@@ -35,6 +35,7 @@ Make sure you have [Java](https://java.com/en/download/) installed. [Download](h
 - Use **arrow keys** to move and draw
 - Hold down **shift** to increase speed or **ctrl/command** to decrease speed
 - Press **T** to take a screenshot
+- Hold down **R** for random cursor movement!
 - Press **C** or **shake the window** to clear the screen!
 
 <br>
