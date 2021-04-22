@@ -12,6 +12,7 @@ float plotterSpeed = 0;
 float knobSpeed = 0.0;
 float leftKnobRotation = 0.1;
 float rightKnobRotation = 0.1;
+float randomX, randomY;
 boolean isUpPressed = false;
 boolean isDownPressed = false;
 boolean isRightPressed = false;
@@ -19,6 +20,7 @@ boolean isLeftPressed = false;
 boolean isShiftPressed = false;
 boolean isCtrlPressed = false;
 boolean isCPressed = false;
+boolean isRPressed = false;
 float plotterSpeedIncrement = 3;
 float knobSpeedIncrement = 0.03;
 float plotterSpeedDecrement = -0.7;
@@ -186,24 +188,46 @@ void draw() {
 
   // Handle movement of the plotter/brush
   // and rotation of knobs
-  if (isUpPressed &&plotterY > frameWidth+10) {
-   plotterY =plotterY - (1 + plotterSpeed);
+  if (isUpPressed && plotterY > frameWidth+10) {
+   plotterY = plotterY - (1 + plotterSpeed);
     rightKnobRotation = rightKnobRotation + (0.01 + knobSpeed);
   }
-  if (isDownPressed &&plotterY < height-frameWidth-10) {
-   plotterY =plotterY + (1 + plotterSpeed);
+  if (isDownPressed && plotterY < height-frameWidth-10) {
+   plotterY = plotterY + (1 + plotterSpeed);
     rightKnobRotation = rightKnobRotation - (0.01 + knobSpeed);
   }
-  if (isLeftPressed &&plotterX > frameWidth+10) {
-   plotterX =plotterX - (1 + plotterSpeed);
+  if (isLeftPressed && plotterX > frameWidth+10) {
+   plotterX = plotterX - (1 + plotterSpeed);
     leftKnobRotation = leftKnobRotation - (0.01 + knobSpeed);
   }
-  if (isRightPressed &&plotterX < width-frameWidth-10) {
-   plotterX =plotterX + (1 + plotterSpeed);
+  if (isRightPressed && plotterX < width-frameWidth-10) {
+   plotterX = plotterX + (1 + plotterSpeed);
     leftKnobRotation = leftKnobRotation + (0.01 + knobSpeed);
   }
-  
+  // experimental:
+  if (isRPressed) {
+        if (plotterY > frameWidth+10 && plotterY < height-frameWidth-10) {
+          randomY = random(-10, 10);
+        } else if (plotterY <= frameWidth+10) {
+          randomY = random(0, 10);
+        } else if (plotterY >= height-frameWidth-10) {
+          randomY = random(-10, 0);
+        }
+        if (plotterX > frameWidth+10 && plotterX < width-frameWidth-10) {
+          randomX = random(-10, 10);
+        } else if (plotterX <= frameWidth+10) {
+          randomX = random(0, 10);
+        } else if (plotterX >= width-frameWidth-10) {
+          randomX = random(-10, 0);
+        }
+        
+        plotterX = plotterX + (randomX + plotterSpeed);
+        plotterY = plotterY + (randomY + plotterSpeed);
+        leftKnobRotation = leftKnobRotation + (0.01 + knobSpeed);
+        rightKnobRotation = rightKnobRotation - (0.01 + knobSpeed);
+      }
 
+   println(plotterX + " " + plotterY);
 }
 
 void keyPressed() {
@@ -243,6 +267,9 @@ void keyPressed() {
     }
     if (key == 'd' && isRightPressed == false) {
       isRightPressed = true;
+    }
+    if (key == 'r' && isRPressed == false) {
+      isRPressed = true;
     }
     else if (key == 'c' && isCPressed == false) {
       isCPressed = true;
@@ -289,6 +316,9 @@ void keyReleased() {
     }
     if (key == 'd') {
       isRightPressed = false;
+    }
+    if (key == 'r') {
+      isRPressed = false;
     }
     // Save screenshot
     else if (key == 't') {
